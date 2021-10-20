@@ -7,23 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E717D490271307220005E248 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D48E271307220005E248 /* Asset.swift */; };
+		E717D491271307220005E248 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D48F271307220005E248 /* Fonts.swift */; };
+		E717D4962713113C0005E248 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D4952713113C0005E248 /* PrimaryButton.swift */; };
+		E717D49827135D020005E248 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D49727135D020005E248 /* UIFont+Extensions.swift */; };
+		E717D49A27136B900005E248 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D49927136B900005E248 /* UIButton+Extensions.swift */; };
+		E717D49C271378C60005E248 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D49B271378C60005E248 /* ChatListViewController.swift */; };
+		E73A36C02716425C00E44FDB /* PinnedChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A36BF2716425C00E44FDB /* PinnedChatCell.swift */; };
 		E752F1252712F3360031135C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752F1242712F3360031135C /* AppDelegate.swift */; };
 		E752F1272712F3360031135C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752F1262712F3360031135C /* SceneDelegate.swift */; };
-		E752F1292712F3360031135C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752F1282712F3360031135C /* ViewController.swift */; };
-		E752F12C2712F3360031135C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752F12A2712F3360031135C /* Main.storyboard */; };
+		E752F1292712F3360031135C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752F1282712F3360031135C /* ProfileViewController.swift */; };
 		E752F12E2712F3370031135C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E752F12D2712F3370031135C /* Assets.xcassets */; };
 		E752F1312712F3370031135C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752F12F2712F3370031135C /* LaunchScreen.storyboard */; };
+		E752F13A2712F8420031135C /* Habibi-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E752F1392712F8420031135C /* Habibi-Regular.ttf */; };
+		E75B7384272068B4001A6E68 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75B7383272068B4001A6E68 /* NavigationController.swift */; };
+		E75B738627206B99001A6E68 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75B738527206B99001A6E68 /* AvatarView.swift */; };
+		E798CD06271F0787002A23CC /* ChatListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798CD05271F0787002A23CC /* ChatListHeader.swift */; };
+		E798CD09271F1EC6002A23CC /* ChatListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798CD08271F1EC6002A23CC /* ChatListItem.swift */; };
+		E798CD0B271F1ED1002A23CC /* PinnedChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E798CD0A271F1ED1002A23CC /* PinnedChat.swift */; };
+		E7A345C5271B7E4600BE7A11 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A345C4271B7E4600BE7A11 /* ChatListCell.swift */; };
+		E7A345C7271B864E00BE7A11 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A345C6271B864E00BE7A11 /* Spacer.swift */; };
+		E7A345C9271B910B00BE7A11 /* PinnedChatsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A345C8271B910B00BE7A11 /* PinnedChatsHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E717D48E271307220005E248 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		E717D48F271307220005E248 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		E717D4952713113C0005E248 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		E717D49727135D020005E248 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		E717D49927136B900005E248 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		E717D49B271378C60005E248 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		E73A36BF2716425C00E44FDB /* PinnedChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedChatCell.swift; sourceTree = "<group>"; };
 		E752F1212712F3360031135C /* hw2-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hw2-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E752F1242712F3360031135C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E752F1262712F3360031135C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E752F1282712F3360031135C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E752F12B2712F3360031135C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E752F1282712F3360031135C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E752F12D2712F3370031135C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E752F1302712F3370031135C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E752F1322712F3370031135C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E752F1392712F8420031135C /* Habibi-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Habibi-Regular.ttf"; sourceTree = "<group>"; };
+		E75B7383272068B4001A6E68 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		E75B738527206B99001A6E68 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		E77E790B271303B300A28141 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = swiftgen.yml; path = "/Users/rrmukhtarov/Desktop/iOS Lab/ITIS_iOS_HW2.1_RMukhtarov/hw2-1/hw2-1/swiftgen.yml"; sourceTree = "<absolute>"; };
+		E798CD05271F0787002A23CC /* ChatListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListHeader.swift; sourceTree = "<group>"; };
+		E798CD08271F1EC6002A23CC /* ChatListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListItem.swift; sourceTree = "<group>"; };
+		E798CD0A271F1ED1002A23CC /* PinnedChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedChat.swift; sourceTree = "<group>"; };
+		E7A345C4271B7E4600BE7A11 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		E7A345C6271B864E00BE7A11 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
+		E7A345C8271B910B00BE7A11 /* PinnedChatsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedChatsHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +68,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E717D48D271305A50005E248 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E717D48E271307220005E248 /* Asset.swift */,
+				E717D48F271307220005E248 /* Fonts.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		E717D49227130D100005E248 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E717D49727135D020005E248 /* UIFont+Extensions.swift */,
+				E717D49927136B900005E248 /* UIButton+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E752F1182712F3360031135C = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +105,69 @@
 		E752F1232712F3360031135C /* hw2-1 */ = {
 			isa = PBXGroup;
 			children = (
+				E75B7389272084C4001A6E68 /* Controllers */,
+				E717D49227130D100005E248 /* Extensions */,
+				E752F1382712F82A0031135C /* Fonts */,
+				E717D48D271305A50005E248 /* Generated */,
+				E798CD07271F1EAD002A23CC /* Models */,
+				E75B738727206CEF001A6E68 /* Views */,
 				E752F1242712F3360031135C /* AppDelegate.swift */,
 				E752F1262712F3360031135C /* SceneDelegate.swift */,
-				E752F1282712F3360031135C /* ViewController.swift */,
-				E752F12A2712F3360031135C /* Main.storyboard */,
 				E752F12D2712F3370031135C /* Assets.xcassets */,
 				E752F12F2712F3370031135C /* LaunchScreen.storyboard */,
 				E752F1322712F3370031135C /* Info.plist */,
+				E77E790B271303B300A28141 /* swiftgen.yml */,
 			);
 			path = "hw2-1";
+			sourceTree = "<group>";
+		};
+		E752F1382712F82A0031135C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E752F1392712F8420031135C /* Habibi-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E75B738727206CEF001A6E68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E75B73882720849F001A6E68 /* ChatList */,
+				E717D4952713113C0005E248 /* PrimaryButton.swift */,
+				E7A345C6271B864E00BE7A11 /* Spacer.swift */,
+				E75B738527206B99001A6E68 /* AvatarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E75B73882720849F001A6E68 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				E7A345C8271B910B00BE7A11 /* PinnedChatsHeader.swift */,
+				E73A36BF2716425C00E44FDB /* PinnedChatCell.swift */,
+				E798CD05271F0787002A23CC /* ChatListHeader.swift */,
+				E7A345C4271B7E4600BE7A11 /* ChatListCell.swift */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		E75B7389272084C4001A6E68 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E75B7383272068B4001A6E68 /* NavigationController.swift */,
+				E752F1282712F3360031135C /* ProfileViewController.swift */,
+				E717D49B271378C60005E248 /* ChatListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E798CD07271F1EAD002A23CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E798CD08271F1EC6002A23CC /* ChatListItem.swift */,
+				E798CD0A271F1ED1002A23CC /* PinnedChat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +227,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E752F13A2712F8420031135C /* Habibi-Regular.ttf in Resources */,
 				E752F1312712F3370031135C /* LaunchScreen.storyboard in Resources */,
 				E752F12E2712F3370031135C /* Assets.xcassets in Resources */,
-				E752F12C2712F3360031135C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +240,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E752F1292712F3360031135C /* ViewController.swift in Sources */,
+				E7A345C5271B7E4600BE7A11 /* ChatListCell.swift in Sources */,
+				E7A345C7271B864E00BE7A11 /* Spacer.swift in Sources */,
+				E798CD09271F1EC6002A23CC /* ChatListItem.swift in Sources */,
+				E752F1292712F3360031135C /* ProfileViewController.swift in Sources */,
 				E752F1252712F3360031135C /* AppDelegate.swift in Sources */,
+				E75B7384272068B4001A6E68 /* NavigationController.swift in Sources */,
+				E717D49827135D020005E248 /* UIFont+Extensions.swift in Sources */,
+				E73A36C02716425C00E44FDB /* PinnedChatCell.swift in Sources */,
+				E717D49A27136B900005E248 /* UIButton+Extensions.swift in Sources */,
+				E75B738627206B99001A6E68 /* AvatarView.swift in Sources */,
+				E717D490271307220005E248 /* Asset.swift in Sources */,
+				E798CD0B271F1ED1002A23CC /* PinnedChat.swift in Sources */,
+				E717D4962713113C0005E248 /* PrimaryButton.swift in Sources */,
+				E717D49C271378C60005E248 /* ChatListViewController.swift in Sources */,
+				E798CD06271F0787002A23CC /* ChatListHeader.swift in Sources */,
 				E752F1272712F3360031135C /* SceneDelegate.swift in Sources */,
+				E717D491271307220005E248 /* Fonts.swift in Sources */,
+				E7A345C9271B910B00BE7A11 /* PinnedChatsHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E752F12A2712F3360031135C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E752F12B2712F3360031135C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E752F12F2712F3370031135C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,6 +398,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "hw2-1/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +417,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "hw2-1/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

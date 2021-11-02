@@ -1,6 +1,6 @@
 //
 //  PrimaryButton.swift
-//  hw2-1
+//  hw2
 //
 //  Created by RRMukhtarov on 10.10.2021.
 //

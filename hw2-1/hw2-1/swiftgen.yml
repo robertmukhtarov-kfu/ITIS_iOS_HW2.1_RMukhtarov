@@ -1,0 +1,11 @@
+xcassets:
+    inputs: ./Assets.xcassets
+    outputs:
+      - templateName: swift5
+        output: ./Generated/Asset.swift
+
+fonts:
+    inputs: ./Fonts
+    outputs:
+      - templateName: swift5
+        output: ./Generated/Fonts.swift

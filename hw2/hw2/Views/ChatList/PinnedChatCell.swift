@@ -1,6 +1,6 @@
 //
 //  PinnedChatCell.swift
-//  hw2-1
+//  hw2
 //
 //  Created by RRMukhtarov on 13.10.2021.
 //

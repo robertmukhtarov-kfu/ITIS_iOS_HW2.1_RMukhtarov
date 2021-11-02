@@ -38,7 +38,7 @@
 		E717D49927136B900005E248 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		E717D49B271378C60005E248 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		E73A36BF2716425C00E44FDB /* PinnedChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedChatCell.swift; sourceTree = "<group>"; };
-		E752F1212712F3360031135C /* hw2-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hw2-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E752F1212712F3360031135C /* hw2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hw2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E752F1242712F3360031135C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E752F1262712F3360031135C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E752F1282712F3360031135C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		E752F1182712F3360031135C = {
 			isa = PBXGroup;
 			children = (
-				E752F1232712F3360031135C /* hw2-1 */,
+				E752F1232712F3360031135C /* hw2 */,
 				E752F1222712F3360031135C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,12 +97,12 @@
 		E752F1222712F3360031135C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E752F1212712F3360031135C /* hw2-1.app */,
+				E752F1212712F3360031135C /* hw2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E752F1232712F3360031135C /* hw2-1 */ = {
+		E752F1232712F3360031135C /* hw2 */ = {
 			isa = PBXGroup;
 			children = (
 				E75B7389272084C4001A6E68 /* Controllers */,
@@ -118,7 +118,7 @@
 				E752F1322712F3370031135C /* Info.plist */,
 				E77E790B271303B300A28141 /* swiftgen.yml */,
 			);
-			path = "hw2-1";
+			path = hw2;
 			sourceTree = "<group>";
 		};
 		E752F1382712F82A0031135C /* Fonts */ = {
@@ -173,9 +173,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E752F1202712F3360031135C /* hw2-1 */ = {
+		E752F1202712F3360031135C /* hw2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E752F1352712F3370031135C /* Build configuration list for PBXNativeTarget "hw2-1" */;
+			buildConfigurationList = E752F1352712F3370031135C /* Build configuration list for PBXNativeTarget "hw2" */;
 			buildPhases = (
 				E752F11D2712F3360031135C /* Sources */,
 				E752F11E2712F3360031135C /* Frameworks */,
@@ -185,9 +185,9 @@
 			);
 			dependencies = (
 			);
-			name = "hw2-1";
+			name = hw2;
 			productName = "hw2-1";
-			productReference = E752F1212712F3360031135C /* hw2-1.app */;
+			productReference = E752F1212712F3360031135C /* hw2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E752F11C2712F3360031135C /* Build configuration list for PBXProject "hw2-1" */;
+			buildConfigurationList = E752F11C2712F3360031135C /* Build configuration list for PBXProject "hw2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,7 +217,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E752F1202712F3360031135C /* hw2-1 */,
+				E752F1202712F3360031135C /* hw2 */,
 			);
 		};
 /* End PBXProject section */
@@ -326,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -381,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -397,13 +397,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "hw2-1/Info.plist";
+				INFOPLIST_FILE = hw2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "robertmukhtarov.hw2-1";
+				PRODUCT_BUNDLE_IDENTIFIER = robertmukhtarov.hw2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,13 +416,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "hw2-1/Info.plist";
+				INFOPLIST_FILE = hw2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "robertmukhtarov.hw2-1";
+				PRODUCT_BUNDLE_IDENTIFIER = robertmukhtarov.hw2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -432,7 +432,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E752F11C2712F3360031135C /* Build configuration list for PBXProject "hw2-1" */ = {
+		E752F11C2712F3360031135C /* Build configuration list for PBXProject "hw2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E752F1332712F3370031135C /* Debug */,
@@ -441,7 +441,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E752F1352712F3370031135C /* Build configuration list for PBXNativeTarget "hw2-1" */ = {
+		E752F1352712F3370031135C /* Build configuration list for PBXNativeTarget "hw2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E752F1362712F3370031135C /* Debug */,

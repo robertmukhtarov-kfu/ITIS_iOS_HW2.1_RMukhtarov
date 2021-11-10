@@ -20,8 +20,9 @@ final class NavigationController: UINavigationController {
     // MARK: - Overridden Internal Methods
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
-            setupBackButton()
+            setup()
         }
     }
     
@@ -39,18 +40,20 @@ final class NavigationController: UINavigationController {
     // MARK: - Private Methods
     
     private func setup() {
-        navigationBar.prefersLargeTitles = true
-        navigationBar.largeTitleTextAttributes
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.largeTitleTextAttributes
             = [.font: UIFont.habibi(size: FontSize.largeTitleText, textStyle: .largeTitle)]
-        navigationBar.titleTextAttributes
+        navBarAppearance.titleTextAttributes
             = [.font: UIFont.habibi(size: FontSize.titleText, textStyle: .headline)]
+        navBarAppearance.backgroundColor = Asset.Colors.navigationBar.color
+        let backButtonImage = Asset.Images.backButton.image
+        navBarAppearance.setBackIndicatorImage(backButtonImage, transitionMaskImage: backButtonImage)
+        navigationBar.standardAppearance = navBarAppearance
+        navigationBar.scrollEdgeAppearance = navBarAppearance
+        navigationBar.prefersLargeTitles = true
+        navigationBar.isOpaque = true
+
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes
             = [.font: UIFont.habibi(size: FontSize.searchBarPlaceholder, textStyle: .body)]
-        setupBackButton()
-    }
-    
-    private func setupBackButton() {
-        navigationBar.backIndicatorImage = Asset.Images.backButton.image
-        navigationBar.backIndicatorTransitionMaskImage = Asset.Images.backButton.image
     }
 }

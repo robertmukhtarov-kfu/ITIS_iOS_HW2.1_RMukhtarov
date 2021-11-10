@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class ProfileViewController: UIViewController {
     
@@ -15,6 +16,10 @@ final class ProfileViewController: UIViewController {
         enum AddressLabel {
             static let topOffset: CGFloat = 19.0
             static let leadingOffset: CGFloat = 25.0
+        }
+
+        enum LogoutButton {
+            static let topOffset: CGFloat = 101.0
         }
     }
     
@@ -49,6 +54,10 @@ final class ProfileViewController: UIViewController {
             [.font : UIFont.habibi(size: FontSize.messagesBarButtonItem, textStyle: .body)],
             for: .normal
         )
+        barButtonItem.setTitleTextAttributes(
+            [.font : UIFont.habibi(size: FontSize.messagesBarButtonItem, textStyle: .body)],
+            for: .highlighted
+        )
         barButtonItem.tintColor = .label
         return barButtonItem
     }()
@@ -77,23 +86,14 @@ final class ProfileViewController: UIViewController {
     }
     
     private func makeConstraints() {
-        addressLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            addressLabel.topAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.topAnchor,
-                constant: LayoutConstants.AddressLabel.topOffset
-            ),
-            addressLabel.leadingAnchor.constraint(
-                equalTo: view.leadingAnchor,
-                constant: LayoutConstants.AddressLabel.leadingOffset
-            )
-        ])
-        
-        logoutButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        addressLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(LayoutConstants.AddressLabel.topOffset)
+            make.leading.equalToSuperview().offset(LayoutConstants.AddressLabel.leadingOffset)
+        }
+        logoutButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(addressLabel.snp.bottom).offset(LayoutConstants.LogoutButton.topOffset)
+        }
     }
     
     // MARK: - Private Methods: Actions

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class ChatListHeader: UICollectionReusableView {
     
@@ -39,12 +40,10 @@ final class ChatListHeader: UICollectionReusableView {
     
     private func setupView() {
         addSubview(divider)
-        divider.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            divider.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            divider.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            divider.heightAnchor.constraint(equalToConstant: LayoutConstants.dividerHeight),
-            divider.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -LayoutConstants.dividerHeight)
-        ])
+        divider.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(LayoutConstants.dividerHeight)
+            make.bottom.equalToSuperview().offset(-LayoutConstants.dividerHeight)
+        }
     }
 }

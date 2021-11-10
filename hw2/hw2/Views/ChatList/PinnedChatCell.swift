@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class PinnedChatCell: UICollectionViewCell {
     
@@ -73,17 +74,12 @@ final class PinnedChatCell: UICollectionViewCell {
     private func setup() {
         contentView.addSubview(stackView)
 
-        NSLayoutConstraint.activate([
-            avatarView.widthAnchor.constraint(equalToConstant: LayoutConstants.AvatarView.width),
-            avatarView.heightAnchor.constraint(equalToConstant: LayoutConstants.AvatarView.height)
-        ])
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
+        avatarView.snp.makeConstraints { make in
+            make.width.equalTo(LayoutConstants.AvatarView.width)
+            make.height.equalTo(LayoutConstants.AvatarView.height)
+        }
+        stackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 }

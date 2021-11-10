@@ -32,14 +32,31 @@ internal enum Asset {
     internal static let tony = ImageAsset(name: "Avatars/tony")
   }
   internal enum Colors {
+    internal enum Chat {
+      internal enum TextField {
+        internal static let background = ColorAsset(name: "Colors/Chat/TextField/background")
+        internal static let inputAreaBackground = ColorAsset(name: "Colors/Chat/TextField/inputAreaBackground")
+        internal static let stroke = ColorAsset(name: "Colors/Chat/TextField/stroke")
+        internal static let text = ColorAsset(name: "Colors/Chat/TextField/text")
+      }
+      internal static let blueMessage = ColorAsset(name: "Colors/Chat/blueMessage")
+      internal static let date = ColorAsset(name: "Colors/Chat/date")
+      internal static let grayMessage = ColorAsset(name: "Colors/Chat/grayMessage")
+      internal static let interlocutorText = ColorAsset(name: "Colors/Chat/interlocutorText")
+      internal static let interlocutorTime = ColorAsset(name: "Colors/Chat/interlocutorTime")
+      internal static let userText = ColorAsset(name: "Colors/Chat/userText")
+      internal static let userTime = ColorAsset(name: "Colors/Chat/userTime")
+    }
     internal static let background = ColorAsset(name: "Colors/background")
     internal static let buttonBorder = ColorAsset(name: "Colors/buttonBorder")
     internal static let chatListGray = ColorAsset(name: "Colors/chatListGray")
+    internal static let navigationBar = ColorAsset(name: "Colors/navigationBar")
     internal static let socialBlue = ColorAsset(name: "Colors/socialBlue")
   }
   internal enum Images {
     internal static let backButton = ImageAsset(name: "Images/backButton")
     internal static let buttonArrowLeft = ImageAsset(name: "Images/buttonArrowLeft")
+    internal static let sendButton = ImageAsset(name: "Images/sendButton")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

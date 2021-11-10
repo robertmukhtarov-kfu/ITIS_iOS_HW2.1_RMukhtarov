@@ -25,6 +25,7 @@ final class PrimaryButton: UIButton {
     // MARK: - Overridden Internal Methods
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
         if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
             layer.borderColor = Asset.Colors.buttonBorder.color.cgColor
         }
@@ -62,6 +63,7 @@ final class PrimaryButton: UIButton {
         titleLabel?.adjustsFontForContentSizeCategory = true
         titleLabel?.font = .habibi(size: FontSize.titleLabel, textStyle: .body)
         layer.borderWidth = LayoutConstants.borderWidth
+        layer.borderColor = Asset.Colors.buttonBorder.color.cgColor
         setInsets(
             contentPadding: UIEdgeInsets(
                 top: LayoutConstants.verticalPadding,

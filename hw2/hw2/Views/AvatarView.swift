@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class AvatarView: UIView {
     
@@ -55,24 +56,17 @@ final class AvatarView: UIView {
     
     private func setupWithName() {
         addSubview(nameLabel)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            nameLabel.topAnchor.constraint(equalTo: topAnchor),
-            nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        
+        nameLabel.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     private func setupWithImage() {
         addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+
+        imageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
-    
 }

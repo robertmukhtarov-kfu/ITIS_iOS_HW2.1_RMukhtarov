@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class ChatListViewController: UIViewController {
     
@@ -82,20 +83,18 @@ final class ChatListViewController: UIViewController {
     }
     
     private func makeConstraints() {
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.bottom.equalToSuperview()
+        }
     }
     
     // MARK: - Private Methods: Collection View Setup
     
     private func setupCollectionView() {
+        collectionView.backgroundColor = Asset.Colors.background.color
         collectionView.dataSource = dataSource
-        
+        collectionView.delegate = self
         collectionView.register(
             PinnedChatCell.self,
             forCellWithReuseIdentifier: pinnedChatCellReuseIdentifier
@@ -114,30 +113,7 @@ final class ChatListViewController: UIViewController {
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: chatListHeaderReuseIdentifier
         )
-        
-        collectionView.backgroundColor = Asset.Colors.background.color
-        
-        dataSource.supplementaryViewProvider = {
-            collectionView, kind, indexPath -> UICollectionReusableView? in
-            
-            switch indexPath.section {
-            case 0:
-                return collectionView.dequeueReusableSupplementaryView(
-                    ofKind: kind,
-                    withReuseIdentifier: self.pinnedChatsHeaderReuseIdentifier,
-                    for: indexPath
-                ) as? PinnedChatsHeader
-            case 1:
-                return collectionView.dequeueReusableSupplementaryView(
-                    ofKind: kind,
-                    withReuseIdentifier: self.chatListHeaderReuseIdentifier,
-                    for: indexPath
-                ) as? ChatListHeader
-            default:
-                fatalError("Invalid section")
-            }
-        }
-        
+
         let pinnedChats = PinnedChat.exampleValues
         let chatPreviews = ChatListItem.exampleValues
         var snapshot = NSDiffableDataSourceSnapshot<Section, AnyHashable>()
@@ -227,7 +203,7 @@ final class ChatListViewController: UIViewController {
     }
     
     private func makeDataSource() -> UICollectionViewDiffableDataSource<Section, AnyHashable> {
-        return UICollectionViewDiffableDataSource(collectionView: collectionView) {
+        let dataSource = UICollectionViewDiffableDataSource<Section, AnyHashable>(collectionView: collectionView) {
             collectionView, indexPath, item -> UICollectionViewCell? in
             
             let cell: UICollectionViewCell
@@ -259,5 +235,59 @@ final class ChatListViewController: UIViewController {
             cell.layoutIfNeeded()
             return cell
         }
+
+        dataSource.supplementaryViewProvider = {
+            collectionView, kind, indexPath -> UICollectionReusableView? in
+            switch indexPath.section {
+            case 0:
+                return collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind,
+                    withReuseIdentifier: self.pinnedChatsHeaderReuseIdentifier,
+                    for: indexPath
+                ) as? PinnedChatsHeader
+            case 1:
+                return collectionView.dequeueReusableSupplementaryView(
+                    ofKind: kind,
+                    withReuseIdentifier: self.chatListHeaderReuseIdentifier,
+                    for: indexPath
+                ) as? ChatListHeader
+            default:
+                fatalError("Invalid section")
+            }
+        }
+
+        return dataSource
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension ChatListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let interlocutorName: String
+        let interlocutorImage: UIImage?
+
+        switch indexPath.section {
+        case 0:
+            guard let pinnedChat = dataSource.itemIdentifier(for: indexPath) as? PinnedChat else {
+                fatalError("Wrong data type at indexPath \(indexPath)")
+            }
+            interlocutorName = pinnedChat.name
+            interlocutorImage = pinnedChat.image
+        case 1:
+            guard let chatListItem = dataSource.itemIdentifier(for: indexPath) as? ChatListItem else {
+                fatalError("Wrong data type at indexPath \(indexPath)")
+            }
+            interlocutorName = chatListItem.name
+            interlocutorImage = chatListItem.image
+        default:
+            fatalError("Invalid section")
+        }
+
+        let chatViewController = ChatViewController(
+            interlocutorName: interlocutorName,
+            interlocutorImage: interlocutorImage
+        )
+        navigationController?.pushViewController(chatViewController, animated: true)
     }
 }

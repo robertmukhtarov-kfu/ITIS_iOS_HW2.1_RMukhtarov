@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class PinnedChatsHeader: UICollectionReusableView {
     
@@ -48,12 +49,10 @@ final class PinnedChatsHeader: UICollectionReusableView {
     
     private func setupView() {
         addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: LayoutConstants.TitleLabel.topOffset),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: LayoutConstants.TitleLabel.bottomOffset)
-        ])
+        titleLabel.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview().offset(LayoutConstants.TitleLabel.topOffset)
+            make.bottom.equalToSuperview().offset(LayoutConstants.TitleLabel.bottomOffset).priority(.high)
+        }
     }
 }

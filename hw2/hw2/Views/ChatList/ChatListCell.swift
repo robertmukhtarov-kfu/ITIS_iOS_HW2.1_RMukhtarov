@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class ChatListCell: UICollectionViewCell {
     
@@ -67,6 +68,7 @@ final class ChatListCell: UICollectionViewCell {
         label.font = .habibi(size: FontSize.dateLabel, textStyle: .body)
         label.adjustsFontForContentSizeCategory = true
         label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        label.setContentCompressionResistancePriority(.defaultHigh + 1, for: .horizontal)
         return label
     }()
     
@@ -86,8 +88,9 @@ final class ChatListCell: UICollectionViewCell {
     
     private lazy var messagePreviewStackView: UIStackView = {
         let spacer = Spacer(size: CGSize(width: LayoutConstants.Spacer.width, height: -1))
-        spacer.setContentCompressionResistancePriority(.defaultHigh + 1, for: .horizontal)
+        spacer.setContentCompressionResistancePriority(.required, for: .horizontal)
         let stackView = UIStackView(arrangedSubviews: [messagePreviewLabel, spacer])
+        stackView.distribution = .fillProportionally
         return stackView
     }()
     
@@ -134,29 +137,18 @@ final class ChatListCell: UICollectionViewCell {
     private func setup() {
         contentView.addSubview(containerStackView)
         contentView.addSubview(divider)
-        
-        divider.translatesAutoresizingMaskIntoConstraints = false
-        let dividerHeight = LayoutConstants.Divider.height
-        NSLayoutConstraint.activate([
-            divider.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            divider.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            divider.heightAnchor.constraint(equalToConstant: dividerHeight),
-            divider.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -dividerHeight)
-        ])
-        
-        avatarView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            avatarView.widthAnchor.constraint(equalToConstant: LayoutConstants.AvatarView.width),
-            avatarView.heightAnchor.constraint(equalToConstant: LayoutConstants.AvatarView.height)
-        ])
-        
-        containerStackView.translatesAutoresizingMaskIntoConstraints = false
-        let inset = LayoutConstants.ContainerStackView.inset
-        NSLayoutConstraint.activate([
-            containerStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: inset),
-            containerStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -inset),
-            containerStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: inset),
-            containerStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -inset)
-        ])
+
+        divider.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(LayoutConstants.Divider.height)
+            make.bottom.equalToSuperview().offset(-LayoutConstants.Divider.height)
+        }
+        avatarView.snp.makeConstraints { make in
+            make.width.equalTo(LayoutConstants.AvatarView.width)
+            make.height.equalTo(LayoutConstants.AvatarView.height)
+        }
+        containerStackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(LayoutConstants.ContainerStackView.inset)
+        }
     }
 }
